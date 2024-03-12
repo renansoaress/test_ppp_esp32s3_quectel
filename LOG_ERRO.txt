@@ -1,0 +1,375 @@
+LOG ERRO:
+
+
+export IDF_PATH=/home/renan/esp/v5.1.2/esp-idf
+/home/renan/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/renan/esp/v5.1.2/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf- --target esp32s3 /home/renan/projects/testes/teste_ppp/build/hello_world.elf
+renan in teste_ppp 
+➜  export IDF_PATH=/home/renan/esp/v5.1.2/esp-idf
+renan in teste_ppp 
+➜  /home/renan/.espressif/python_env/idf5.1_py3.10_env/bin/python /home/renan/esp/v5.1.2/esp-idf/tools/idf_monitor.py -p /dev/ttyACM0 -b 115200 --toolchain-prefix xtensa-esp32s3-elf
+- --target esp32s3 /home/renan/projects/testes/teste_ppp/build/hello_world.elf
+--- esp-idf-monitor 1.4.0 on /dev/ttyACM0 115200 ---
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x15 (USB_UART_CHIP_RESET),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x40378552
+0x40378552: esp_cpu_wait_for_intr at /home/renan/esp/v5.1.2/esp-idf/components/esp_hw_support/cpu.c:121
+
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+I (26) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader
+I (27) boot: compile time Mar 11 2024 15:07:08
+I (27) boot: Multicore bootloader
+I (30) boot: chip revision: v0.1
+I (34) boot.esp32s3: Boot SPI Speed : 80MHz
+I (39) boot.esp32s3: SPI Mode       : DIO
+I (44) boot.esp32s3: SPI Flash Size : 2MB
+I (48) boot: Enabling RNG early entropy source...
+I (54) boot: Partition Table:
+I (57) boot: ## Label            Usage          Type ST Offset   Length
+I (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (72) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (79) boot:  2 factory          factory app      00 00 00010000 00100000
+I (87) boot: End of partition table
+I (91) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=25a64h (154212) map
+I (127) esp_image: segment 1: paddr=00035a8c vaddr=3fc90800 size=02f38h ( 12088) load
+I (130) esp_image: segment 2: paddr=000389cc vaddr=40374000 size=0764ch ( 30284) load
+I (140) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=73600h (472576) map
+I (226) esp_image: segment 4: paddr=000b3628 vaddr=4037b64c size=05150h ( 20816) load
+I (237) boot: Loaded app from partition at offset 0x10000
+I (237) boot: Disabling RNG early entropy source...
+I (248) cpu_start: Multicore app
+D (248) flash HPM: HPM with dummy, status is 3
+I (249) cpu_start: Pro cpu up.
+I (249) cpu_start: Starting app cpu, entry point is 0x40375310
+0x40375310: call_start_cpu1 at /home/renan/esp/v5.1.2/esp-idf/components/esp_system/port/cpu_start.c:157
+
+I (0) cpu_start: App cpu up.
+D (264) clk: RTC_SLOW_CLK calibration value: 3956006
+I (276) cpu_start: Pro cpu start user code
+I (276) cpu_start: cpu freq: 240000000 Hz
+I (276) cpu_start: Application information:
+I (279) cpu_start: Project name:     hello_world
+I (285) cpu_start: App version:      50ac4c6-dirty
+I (290) cpu_start: Compile time:     Mar 11 2024 15:07:06
+I (296) cpu_start: ELF file SHA256:  13359c42e1ec3e9d...
+I (302) cpu_start: ESP-IDF:          v5.1.2-dirty
+I (308) cpu_start: Min chip rev:     v0.0
+I (312) cpu_start: Max chip rev:     v0.99 
+I (317) cpu_start: Chip rev:         v0.1
+D (322) memory_layout: Checking 6 reserved memory ranges:
+D (327) memory_layout: Reserved memory range 0x3fc84000 - 0x3fc90800
+D (334) memory_layout: Reserved memory range 0x3fc90800 - 0x3fc96030
+D (340) memory_layout: Reserved memory range 0x3fceee34 - 0x3fcf0000
+D (347) memory_layout: Reserved memory range 0x40374000 - 0x40380800
+0x40374000: _WindowOverflow4 at /home/renan/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2027
+
+D (353) memory_layout: Reserved memory range 0x600fe000 - 0x600fe010
+D (359) memory_layout: Reserved memory range 0x600fffe8 - 0x60100000
+D (366) memory_layout: Building list of available memory regions:
+D (372) memory_layout: Available memory region 0x3fc96030 - 0x3fca0000
+D (379) memory_layout: Available memory region 0x3fca0000 - 0x3fcb0000
+D (385) memory_layout: Available memory region 0x3fcb0000 - 0x3fcc0000
+D (392) memory_layout: Available memory region 0x3fcc0000 - 0x3fcd0000
+D (398) memory_layout: Available memory region 0x3fcd0000 - 0x3fce0000
+D (405) memory_layout: Available memory region 0x3fce0000 - 0x3fce9710
+D (412) memory_layout: Available memory region 0x3fce9710 - 0x3fceee34
+D (418) memory_layout: Available memory region 0x3fcf0000 - 0x3fcf8000
+D (425) memory_layout: Available memory region 0x600fe010 - 0x600fffe8
+I (431) heap_init: Initializing. RAM available for dynamic allocation:
+D (439) heap_init: New heap initialised at 0x3fc96030
+I (444) heap_init: At 3FC96030 len 000536E0 (333 KiB): DRAM
+I (450) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM
+D (457) heap_init: New heap initialised at 0x3fcf0000
+I (462) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+D (468) heap_init: New heap initialised at 0x600fe010
+I (473) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM
+D (480) intr_alloc: Connected src 39 to int 2 (cpu 0)
+D (485) spi_flash: trying chip: issi
+D (488) spi_flash: trying chip: gd
+I (492) spi_flash: detected chip: gd
+I (496) spi_flash: flash io: dio
+W (500) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+D (513) cpu_start: calling init function: 0x4204fe68
+0x4204fe68: _GLOBAL__sub_I__ZNSt12ctype_bynameIwEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/src/c++11/locale-inst.cc:229
+
+D (518) cpu_start: calling init function: 0x4204b31c
+0x4204b31c: _GLOBAL__sub_I__ZNSt12ctype_bynameIcEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/src/c++11/locale-inst.cc:229
+
+D (523) cpu_start: calling init function: 0x420424d8
+0x420424d8: _GLOBAL__sub_I__ZN17__eh_globals_init7_S_initE at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/libsupc++/eh_globals.cc:168
+
+D (528) cpu_start: calling init function: 0x420422f4
+0x420422f4: _GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/libsupc++/eh_alloc.cc:342
+
+D (533) cpu_start: calling init function: 0x42041f28
+0x42041f28: _GLOBAL__sub_I__ZNSt12ctype_bynameIwEC2ERKSsj at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/src/c++11/locale-inst.cc:229
+
+D (538) cpu_start: calling init function: 0x420393a8
+0x420393a8: _GLOBAL__sub_I__ZNSt12ctype_bynameIcEC2ERKSsj at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/src/c++11/locale-inst.cc:229
+
+D (543) cpu_start: calling init function: 0x42015868
+0x42015868: esp_ipc_init at /home/renan/esp/v5.1.2/esp-idf/components/esp_system/esp_ipc.c:114
+
+D (548) cpu_start: calling init function: 0x42010e84
+0x42010e84: _GLOBAL__sub_I__ZN9esp_modem12dce_commands15generic_commandEPNS_13CommandableIfERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_SA_m at /home/renan/projects/testes/teste_ppp/components/esp_modem/src/esp_modem_command_library.cpp:637
+
+D (555) cpu_start: calling init function: 0x420027b4
+0x420027b4: esp_init_app_elf_sha256 at /home/renan/esp/v5.1.2/esp-idf/components/esp_app_format/esp_app_desc.c:69
+
+D (558) cpu_start: calling init function: 0x4200850c on core: 0
+0x4200850c: __esp_system_init_fn_esp_timer_startup_init at /home/renan/esp/v5.1.2/esp-idf/components/esp_timer/src/esp_timer.c:576
+
+D (565) intr_alloc: Connected src 59 to int 3 (cpu 0)
+D (569) cpu_start: calling init function: 0x420053d0 on core: 0
+0x420053d0: __esp_system_init_fn_esp_sleep_startup_init at /home/renan/esp/v5.1.2/esp-idf/components/esp_hw_support/sleep_gpio.c:189
+
+I (575) sleep: Configure to isolate all GPIO pins in sleep state
+I (582) sleep: Enable automatic switching of GPIO sleep configuration
+D (589) cpu_start: calling init function: 0x42003934 on core: 0
+0x42003934: __esp_system_init_fn_init_components0 at /home/renan/esp/v5.1.2/esp-idf/components/esp_system/startup.c:486
+
+D (595) intr_alloc: Connected src 79 to int 9 (cpu 0)
+I (600) app_start: Starting scheduler on CPU0
+D (605) intr_alloc: Connected src 57 to int 12 (cpu 0)
+D (605) intr_alloc: Connected src 80 to int 2 (cpu 1)
+I (615) app_start: Starting scheduler on CPU1
+D (615) intr_alloc: Connected src 58 to int 3 (cpu 1)
+I (605) main_task: Started on CPU0
+D (625) heap_init: New heap initialised at 0x3fce9710
+D (625) intr_alloc: Connected src 52 to int 13 (cpu 0)
+I (635) main_task: Calling app_main()
+I (635) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+I (645) gpio: GPIO[39]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+I (655) gpio: GPIO[40]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+I (665) pppos_example: Restart the modem
+D (14025) esp_netif_lwip: LwIP stack has been initialized
+D (14025) esp_netif_lwip: check: remote, if=0x0 fn=0x42017468
+0x42017468: alloc_client_data_id at /home/renan/esp/v5.1.2/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:166
+
+
+D (14025) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (14025) esp_netif_lwip: esp-netif has been successfully initialized
+D (14035) event: running task for loop 0x3fc9e034
+D (14035) event: created task for loop 0x3fc9e034
+D (14045) event: created event loop 0x3fc9e034
+D (14045) esp_netif_objects: esp_netif_add_to_list 0x3fc9f2d4
+D (14055) esp_netif_objects: esp_netif_add_to_list netif added successfully (total netifs: 1)
+D (14065) esp-netif_lwip-ppp: esp_netif_new_ppp: PPP connection created: 0x3fc9f5e4
+D (14075) esp-netif_lwip-ppp: Phase Dead
+D (14075) esp_netif_lwip: check: remote, if=0x0 fn=0x42017478
+0x42017478: set_lwip_netif_callback at /home/renan/esp/v5.1.2/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:174
+
+
+D (14075) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+D (14085) esp_netif_lwip: check: remote, if=0x3fc9f2d4 fn=0x42018570
+0x42018570: esp_netif_update_default_netif_lwip at /home/renan/esp/v5.1.2/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:327
+
+
+D (14095) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9f2d4
+D (14095) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+I (14105) pppos_example: Initializing Network module...
+I (14115) uart: queue free spaces: 30
+D (14115) intr_alloc: Connected src 28 to int 17 (cpu 0)
+D (14125) command_lib: generic_command command AT
+
+D (14125) command_lib: Response: AT
+OK
+
+
+I (14335) pppos_example: Signal quality: rssi=15, ber=99
+D (14335) command_lib: generic_command command AT+CMUX=0,0,5,500,10,3,30,10,2
+
+D (14435) command_lib: Response: AT+CMUX=0,0,5,500,10,3,30,10,2
+OK
+
+
+D (14535) CMUX: Payload frame: dlci:00 type:73 payload:0 available:2
+D (14545) CMUX: Payload frame: dlci:01 type:73 payload:0 available:13
+D (14545) CMUX: Payload frame: dlci:00 type:ef payload:5 available:7
+D (14555) CMUX: Payload frame: dlci:02 type:73 payload:0 available:13
+D (14555) CMUX: Payload frame: dlci:00 type:ef payload:5 available:7
+D (14565) command_lib: generic_command command ATE0
+
+D (14565) CMUX: Payload frame: dlci:01 type:ef payload:11 available:13
+D (14575) command_lib: Response: ATE0
+OK
+
+
+D (14575) command_lib: generic_command command AT+CGDCONT=1,"IP","lf.br"
+
+D (14585) CMUX: Payload frame: dlci:01 type:ef payload:6 available:8
+D (14585) command_lib: Response: 
+OK
+
+
+D (14595) command_lib: generic_command command ATD*99#
+
+D (14605) CMUX: Payload frame: dlci:00 type:ef payload:5 available:24
+D (14605) CMUX: Payload frame: dlci:01 type:ef payload:11 available:13
+D (14615) command_lib: Response: 
+CONNECT
+
+
+D (14615) esp_netif_handlers: esp_netif action has started with netif0x3fc9f2d4 from event_id=0
+D (14625) esp-netif_lwip-ppp: esp_netif_start_ppp: Starting PPP connection: 0x3fc9f5e4
+D (14635) esp-netif_lwip-ppp: Phase Start
+D (14635) esp-netif_lwip-ppp: Phase Establish
+D (14645) esp_netif_lwip: check: remote, if=0x3fc9f2d4 fn=0x42018570
+0x42018570: esp_netif_update_default_netif_lwip at /home/renan/esp/v5.1.2/esp-idf/components/esp_netif/lwip/esp_netif_lwip.c:327
+
+
+D (14645) esp_netif_lwip: esp_netif_update_default_netif_lwip 0x3fc9f2d4
+D (14655) esp_netif_lwip: call api in lwip: ret=0x0, give sem
+I (14665) pppos_example: Waiting for IP address
+D (17905) CMUX: Payload frame: dlci:00 type:ef payload:5 available:31
+D (17905) CMUX: Payload frame: dlci:02 type:ef payload:18 available:20
+D (18015) CMUX: Payload frame: dlci:00 type:ef payload:5 available:7
+ESP-ROM:esp32s3-20210327
+Build:Mar 27 2021
+rst:0x7 (TG0WDT_SYS_RST),boot:0xb (SPI_FAST_FLASH_BOOT)
+Saved PC:0x4037afb2
+0x4037afb2: spinlock_release at /home/renan/esp/v5.1.2/esp-idf/components/esp_hw_support/include/spinlock.h:169
+ (inlined by) vPortExitCritical at /home/renan/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:523
+
+SPIWP:0xee
+mode:DIO, clock div:1
+load:0x3fce3818,len:0x1758
+load:0x403c9700,len:0x4
+load:0x403c9704,len:0xc00
+load:0x403cc700,len:0x2e04
+entry 0x403c9908
+I (26) boot: ESP-IDF v5.1.2-dirty 2nd stage bootloader
+I (26) boot: compile time Mar 11 2024 15:07:08
+I (26) boot: Multicore bootloader
+I (30) boot: chip revision: v0.1
+I (33) boot.esp32s3: Boot SPI Speed : 80MHz
+I (38) boot.esp32s3: SPI Mode       : DIO
+I (43) boot.esp32s3: SPI Flash Size : 2MB
+W (48) boot.esp32s3: PRO CPU has been reset by WDT.
+W (53) boot.esp32s3: APP CPU has been reset by WDT.
+I (59) boot: Enabling RNG early entropy source...
+I (64) boot: Partition Table:
+I (68) boot: ## Label            Usage          Type ST Offset   Length
+I (75) boot:  0 nvs              WiFi data        01 02 00009000 00006000
+I (83) boot:  1 phy_init         RF data          01 01 0000f000 00001000
+I (90) boot:  2 factory          factory app      00 00 00010000 00100000
+I (98) boot: End of partition table
+I (102) esp_image: segment 0: paddr=00010020 vaddr=3c080020 size=25a64h (154212) map
+I (138) esp_image: segment 1: paddr=00035a8c vaddr=3fc90800 size=02f38h ( 12088) load
+I (141) esp_image: segment 2: paddr=000389cc vaddr=40374000 size=0764ch ( 30284) load
+I (151) esp_image: segment 3: paddr=00040020 vaddr=42000020 size=73600h (472576) map
+I (237) esp_image: segment 4: paddr=000b3628 vaddr=4037b64c size=05150h ( 20816) load
+I (247) boot: Loaded app from partition at offset 0x10000
+I (248) boot: Disabling RNG early entropy source...
+I (259) cpu_start: Multicore app
+D (259) flash HPM: HPM with dummy, status is 3
+I (259) cpu_start: Pro cpu up.
+I (260) cpu_start: Starting app cpu, entry point is 0x40375310
+0x40375310: call_start_cpu1 at /home/renan/esp/v5.1.2/esp-idf/components/esp_system/port/cpu_start.c:157
+
+I (0) cpu_start: App cpu up.
+D (275) clk: RTC_SLOW_CLK calibration value: 3978368
+I (287) cpu_start: Pro cpu start user code
+I (287) cpu_start: cpu freq: 240000000 Hz
+I (287) cpu_start: Application information:
+I (290) cpu_start: Project name:     hello_world
+I (295) cpu_start: App version:      50ac4c6-dirty
+I (301) cpu_start: Compile time:     Mar 11 2024 15:07:06
+I (307) cpu_start: ELF file SHA256:  13359c42e1ec3e9d...
+I (313) cpu_start: ESP-IDF:          v5.1.2-dirty
+I (318) cpu_start: Min chip rev:     v0.0
+I (323) cpu_start: Max chip rev:     v0.99 
+I (328) cpu_start: Chip rev:         v0.1
+D (333) memory_layout: Checking 6 reserved memory ranges:
+D (338) memory_layout: Reserved memory range 0x3fc84000 - 0x3fc90800
+D (344) memory_layout: Reserved memory range 0x3fc90800 - 0x3fc96030
+D (351) memory_layout: Reserved memory range 0x3fceee34 - 0x3fcf0000
+D (357) memory_layout: Reserved memory range 0x40374000 - 0x40380800
+0x40374000: _WindowOverflow4 at /home/renan/esp/v5.1.2/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/xtensa_vectors.S:2027
+
+D (364) memory_layout: Reserved memory range 0x600fe000 - 0x600fe010
+D (370) memory_layout: Reserved memory range 0x600fffe8 - 0x60100000
+D (376) memory_layout: Building list of available memory regions:
+D (383) memory_layout: Available memory region 0x3fc96030 - 0x3fca0000
+D (389) memory_layout: Available memory region 0x3fca0000 - 0x3fcb0000
+D (396) memory_layout: Available memory region 0x3fcb0000 - 0x3fcc0000
+D (402) memory_layout: Available memory region 0x3fcc0000 - 0x3fcd0000
+D (409) memory_layout: Available memory region 0x3fcd0000 - 0x3fce0000
+D (416) memory_layout: Available memory region 0x3fce0000 - 0x3fce9710
+D (422) memory_layout: Available memory region 0x3fce9710 - 0x3fceee34
+D (429) memory_layout: Available memory region 0x3fcf0000 - 0x3fcf8000
+D (435) memory_layout: Available memory region 0x600fe010 - 0x600fffe8
+I (442) heap_init: Initializing. RAM available for dynamic allocation:
+D (449) heap_init: New heap initialised at 0x3fc96030
+I (454) heap_init: At 3FC96030 len 000536E0 (333 KiB): DRAM
+I (461) heap_init: At 3FCE9710 len 00005724 (21 KiB): STACK/DRAM
+D (467) heap_init: New heap initialised at 0x3fcf0000
+I (472) heap_init: At 3FCF0000 len 00008000 (32 KiB): DRAM
+D (479) heap_init: New heap initialised at 0x600fe010
+I (484) heap_init: At 600FE010 len 00001FD8 (7 KiB): RTCRAM
+D (490) intr_alloc: Connected src 39 to int 2 (cpu 0)
+D (496) spi_flash: trying chip: issi
+D (499) spi_flash: trying chip: gd
+I (502) spi_flash: detected chip: gd
+I (506) spi_flash: flash io: dio
+W (510) spi_flash: Detected size(8192k) larger than the size in the binary image header(2048k). Using the size in the binary image header.
+D (523) cpu_start: calling init function: 0x4204fe68
+0x4204fe68: _GLOBAL__sub_I__ZNSt12ctype_bynameIwEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/src/c++11/locale-inst.cc:229
+
+D (529) cpu_start: calling init function: 0x4204b31c
+0x4204b31c: _GLOBAL__sub_I__ZNSt12ctype_bynameIcEC2ERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEEj at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/src/c++11/locale-inst.cc:229
+
+D (534) cpu_start: calling init function: 0x420424d8
+0x420424d8: _GLOBAL__sub_I__ZN17__eh_globals_init7_S_initE at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/libsupc++/eh_globals.cc:168
+
+D (539) cpu_start: calling init function: 0x420422f4
+0x420422f4: _GLOBAL__sub_I__ZN9__gnu_cxx9__freeresEv at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/libsupc++/eh_alloc.cc:342
+
+D (544) cpu_start: calling init function: 0x42041f28
+0x42041f28: _GLOBAL__sub_I__ZNSt12ctype_bynameIwEC2ERKSsj at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/src/c++11/locale-inst.cc:229
+
+D (549) cpu_start: calling init function: 0x420393a8
+0x420393a8: _GLOBAL__sub_I__ZNSt12ctype_bynameIcEC2ERKSsj at /builds/idf/crosstool-NG/.build/xtensa-esp32s3-elf/src/gcc/libstdc++-v3/src/c++11/locale-inst.cc:229
+
+D (554) cpu_start: calling init function: 0x42015868
+0x42015868: esp_ipc_init at /home/renan/esp/v5.1.2/esp-idf/components/esp_system/esp_ipc.c:114
+
+D (559) cpu_start: calling init function: 0x42010e84
+0x42010e84: _GLOBAL__sub_I__ZN9esp_modem12dce_commands15generic_commandEPNS_13CommandableIfERKNSt7__cxx1112basic_stringIcSt11char_traitsIcESaIcEEESA_SA_m at /home/renan/projects/testes/teste_ppp/components/esp_modem/src/esp_modem_command_library.cpp:637
+
+D (565) cpu_start: calling init function: 0x420027b4
+0x420027b4: esp_init_app_elf_sha256 at /home/renan/esp/v5.1.2/esp-idf/components/esp_app_format/esp_app_desc.c:69
+
+D (569) cpu_start: calling init function: 0x4200850c on core: 0
+0x4200850c: __esp_system_init_fn_esp_timer_startup_init at /home/renan/esp/v5.1.2/esp-idf/components/esp_timer/src/esp_timer.c:576
+
+D (575) intr_alloc: Connected src 59 to int 3 (cpu 0)
+D (580) cpu_start: calling init function: 0x420053d0 on core: 0
+0x420053d0: __esp_system_init_fn_esp_sleep_startup_init at /home/renan/esp/v5.1.2/esp-idf/components/esp_hw_support/sleep_gpio.c:189
+
+I (586) sleep: Configure to isolate all GPIO pins in sleep state
+I (593) sleep: Enable automatic switching of GPIO sleep configuration
+D (600) cpu_start: calling init function: 0x42003934 on core: 0
+0x42003934: __esp_system_init_fn_init_components0 at /home/renan/esp/v5.1.2/esp-idf/components/esp_system/startup.c:486
+
+D (606) intr_alloc: Connected src 79 to int 9 (cpu 0)
+I (611) app_start: Starting scheduler on CPU0
+D (616) intr_alloc: Connected src 57 to int 12 (cpu 0)
+D (616) intr_alloc: Connected src 80 to int 2 (cpu 1)
+I (626) app_start: Starting scheduler on CPU1
+D (626) intr_alloc: Connected src 58 to int 3 (cpu 1)
+I (616) main_task: Started on CPU0
+D (636) heap_init: New heap initialised at 0x3fce9710
+D (636) intr_alloc: Connected src 52 to int 13 (cpu 0)
+I (646) main_task: Calling app_main()
+I (646) gpio: GPIO[33]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+I (656) gpio: GPIO[39]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+I (666) gpio: GPIO[40]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 
+I (676) pppos_example: Restart the modem
